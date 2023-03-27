@@ -1,16 +1,26 @@
-### Hi there 👋
-
-<!--
-**anthorapheye/anthorapheye** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<style>
+    h1 {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 100vw;
+        transform: translateX(-50%, -50%);
+        text-align: center;
+        color: #f00;
+        font-family: consolas;
+        user-select: none;
+    }
+</style>
+<h1></h1>
+<script>
+    const titre = document.querySelector("h1");
+    const texte = "👁 Welcome to my Github page 👁";
+    const img = new Image();
+    img.src = "./autorun.ico";
+    let i = 0;
+    const timerID = setInterval(() => {
+        titre.innerHTML += texte[i];
+        i++;
+        if (i === texte.length) clearInterval(timerID);
+    }, 100);
+</script>
